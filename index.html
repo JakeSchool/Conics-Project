@@ -59,10 +59,10 @@
       for (var i = 0; i < container.children.length; i++) { //loop through all images
         img = container.children[i].children[0]; //stores individual image
         img.addEventListener("mouseover", function() { //adds mouse over event to all images
-          event(img);
+          over(img);
         });
         img.addEventListener("mouseout", function() { //adds mouse out event to all images
-          event(img);
+          out(img);
         });
       }
 
