@@ -9,47 +9,47 @@
     <div class="grid-container">
       <div class="grid-item">
         <img src="./img/windmill.jpg" class="img">
-        <h3 class="caption"> Caption</h3>
+        <p class="caption">A windmill in Amsterdam, the Netherlands.</p>
       </div>
       <div class="grid-item">
         <img src="./img/canal.jpg" class="img">
-        <h3 class="caption"> Caption</h3>
+        <p class="caption">A canal in Amsterdam, the Netherlands</p>
       </div>
       <div class="grid-item">
         <img src="./img/eiffel_tower.jpg" class="img">
-        <h3 class="caption"> Caption</h3>
+        <p class="caption">The Eiffel Tower in Paris, France.</p>
       </div>
       <div class="grid-item">
         <img src="./img/eye.jpg" class="img">
-        <h3 class="caption"> Caption</h3>
+        <p class="caption">The Coca-Cola London Eye in London, England.</p>
       </div>
       <div class="grid-item">
         <img src="./img/firework.jpg" class="img">
-        <h3 class="caption"> Caption</h3>
+        <p class="caption">A firework in Carolina Beach, NC.</p>
       </div>
       <div class="grid-item">
         <img src="./img/gate.jpg" class="img">
-        <h3 class="caption"> Caption</h3>
+        <p class="caption">The gate at the exit of the Sainte Chapelle in Paris, France.</p>
       </div>
       <div class="grid-item">
         <img src="./img/lamp.jpg" class="img">
-        <h3 class="caption"> Caption</h3>
+        <p class="caption">A heat lamp found in Rango's cage.</p>
       </div>
       <div class="grid-item">
         <img src="./img/london.jpg" class="img">
-        <h3 class="caption"> Caption</h3>
+        <p class="caption">The SEA LIFE Centre London Aquarium in London, England.</p>
       </div>
       <div class="grid-item">
         <img src="./img/notre_dame.jpg" class="img">
-        <h3 class="caption"> Caption</h3>
+        <p class="caption">Notre Dame in Paris, France</p>
       </div>
       <div class="grid-item">
         <img src="./img/Tool.jpg" class="img">
-        <h3 class="caption"> Caption</h3>
+        <p class="caption"></p>
       </div>
       <div class="grid-item">
         <img src="./img/triomphe.jpg" class="img">
-        <h3 class="caption"> Caption</h3>
+        <p class="caption">Arc de Triomphe in Paris, France.</p>
       </div>
     </div>
 
@@ -58,20 +58,15 @@
       var img;
       for (var i = 0; i < container.children.length; i++) { //loop through all images
         img = container.children[i].children[0]; //stores individual image
+        console.log(img);
         img.addEventListener("mouseover", function() { //adds mouse over event to all images
-          over(img);
+          this.src = this.src.substring(0, this.src.length - 4) + "E" + ".jpg"; //Adds an "E" to the src to change the image to the edited version
         });
         img.addEventListener("mouseout", function() { //adds mouse out event to all images
-          out(img);
+          this.src = this.src.substring(0, this.src.length - 5) + ".jpg"; //reverts back to the origional version
         });
       }
 
-      function over(img) {
-        img.src = img.src.substring(0, img.src.length - 4) + "E" + ".jpg"; //Adds an "E" to the src to change the image to the edited version
-      }
-      function out(img) {
-        img.src = img.src.substring(0, img.src.length - 5) + ".jpg"; //reverts back to the origional version
-      }
     </script>
 
   </body>

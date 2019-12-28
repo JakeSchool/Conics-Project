@@ -1,14 +1,14 @@
 .grid-container{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   margin: 30px;
 }
 
 .grid-item{
   display: inline-grid;
   margin: 30px;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 
 .img {
@@ -23,5 +23,4 @@
 body {
   width: auto;
   height: auto;
-  padding: 15px;
 }
