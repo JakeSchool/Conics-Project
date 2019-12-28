@@ -1,7 +1,7 @@
 .grid-container{
   display: grid;
   grid-template-columns: auto auto auto auto;
-  margin: 10px;
+  margin: 30px;
 }
 
 .grid-item{
@@ -18,4 +18,10 @@
 
 .caption{
   text-align: center;
+}
+
+body {
+  width: auto;
+  height: auto;
+  padding: 15px;
 }

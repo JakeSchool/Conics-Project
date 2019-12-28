@@ -52,8 +52,27 @@
         <h3 class="caption"> Caption</h3>
       </div>
     </div>
+
     <script type="text/javascript">
-      
+      var container = document.getElementsByClassName("grid-container")[0];
+      var img;
+      for (var i = 0; i < container.children.length; i++) { //loop through all images
+        img = container.children[i].children[0]; //stores individual image
+        img.addEventListener("mouseover", function() { //adds mouse over event to all images
+          event(img);
+        });
+        img.addEventListener("mouseout", function() { //adds mouse out event to all images
+          event(img);
+        });
+      }
+
+      function over(img) {
+        img.src = img.src.substring(0, img.src.length - 4) + "E" + ".jpg"; //Adds an "E" to the src to change the image to the edited version
+      }
+      function out(img) {
+        img.src = img.src.substring(0, img.src.length - 5) + ".jpg"; //reverts back to the origional version
+      }
     </script>
+
   </body>
 </html>
