@@ -45,7 +45,7 @@
       </div>
       <div class="grid-item">
         <img src="./img/Tool.jpg" class="img">
-        <p class="caption"></p>
+        <p class="caption">a pair of needle nose plires found in Hanover electric motors</p>
       </div>
       <div class="grid-item">
         <img src="./img/triomphe.jpg" class="img">
@@ -58,7 +58,6 @@
       var img;
       for (var i = 0; i < container.children.length; i++) { //loop through all images
         img = container.children[i].children[0]; //stores individual image
-        console.log(img);
         img.addEventListener("mouseover", function() { //adds mouse over event to all images
           this.src = this.src.substring(0, this.src.length - 4) + "E" + ".jpg"; //Adds an "E" to the src to change the image to the edited version
         });
